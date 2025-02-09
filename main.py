@@ -1,8 +1,8 @@
 import requests
 
-check_website = "https://winbloxos.phytonanywhere.com"
+check_website = input("enter the website link you want to check :")
 
-response = requests.get(check_website)
+response = requests.get(f"https://{check_website}")
 
 def avalibality(c_avalibality):
     try:
@@ -13,4 +13,4 @@ def avalibality(c_avalibality):
     except requests.exceptions.RequestException as e:
         print(f"Error while checking {c_avalibality}: {e}")
 
-avalibality(check_website)
+avalibality(response)
