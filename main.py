@@ -6,7 +6,7 @@ response = requests.get(f"https://{check_website}")
 
 def avalibality(c_avalibality):
     try:
-        if response.status_code == 100 or 200:
+        if response.status_code == 200:
             print("Server is working and is ready to get data.")
         else:
             print("Server is not ready.", response)
